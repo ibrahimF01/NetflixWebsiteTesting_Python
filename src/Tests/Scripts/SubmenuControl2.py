@@ -75,4 +75,5 @@ class submenuControl2(WebDriverSetup):
         print("Kullanıcıya ait internet hız bilgisi= "+home_page.get_hizTestiSpeedValue_ID().text)
         WebDriverWait(driver, 45).until(expected_conditions.element_to_be_clickable((By.CSS_SELECTOR,"span[class$='refresh']")))
         zaman = datetime.datetime.now().strftime("%d" + "-" + "%m" + "-" + "%Y" + "_saat_" + "%H" + "_" + "%M" + "_ve_" + "%S" + "_saniye")
-        driver.save_screenshot("ScreenShots/" + zaman + ".png")
+        # driver.save_screenshot("ScreenShots/" + zaman + ".png")
+        driver.save_screenshot("C:/Users/mkara/PycharmProjects/NetflixWebsiteTesting_Python/ScreenShots/" + zaman + ".png")
