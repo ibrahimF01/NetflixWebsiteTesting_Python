@@ -22,6 +22,7 @@ class HomePage:
         self.loginNegativeVerifyMessage = "div[data-uia='text']"
         self.loginEmptyVerifyMessage1 = "div[data-uia='login-field+error']"
         self.loginEmptyVerifyMessage2 = "div[data-uia='password-field+error']"
+        self.orta3Element = "div[data-uia-nmhp='watchOnDevice']"
 
 
     def get_acceptButton_CSS(self):
@@ -50,6 +51,8 @@ class HomePage:
         return self.driver.find_element(By.CSS_SELECTOR, self.loginEmptyVerifyMessage1)
     def get_loginEmptyVerifyMessage2(self):
         return self.driver.find_element(By.CSS_SELECTOR, self.loginEmptyVerifyMessage2)
+    def get_orta3(self):
+        return self.driver.find_element(By.CSS_SELECTOR, self.orta3Element)
 
     def scrollToElementMid(self, element):
         scrollElementIntoMiddle = "var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);"
@@ -94,6 +97,7 @@ class HomePage:
             case "loginNegativeVerifyMessage": self.myElement = self.get_loginNegativeVerifyMessage()
             case "loginEmptyVerifyMessage1": self.myElement = self.get_loginEmptyVerifyMessage1()
             case "loginEmptyVerifyMessage2": self.myElement = self.get_loginEmptyVerifyMessage2()
+            case "orta3Element": self.myElement = self.get_orta3()
         self.scrollToElementMid(self.myElement)
         EC.visibility_of(self.myElement)
         assert textElement in self.myElement.text
