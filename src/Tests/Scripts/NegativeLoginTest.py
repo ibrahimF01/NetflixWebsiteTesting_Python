@@ -14,7 +14,7 @@ class negativeLoginTest(WebDriverSetup):
         home_page.findAndSend("userLogin_ID","testMail@hotmail.com")
         home_page.findAndSend("userPassword_ID","1234567890")
         home_page.findAndClick("oturumAcBtn2_CSS")
-        home_page.findAndVerify("loginNegativeVerifyMessage","Bu e‑posta adresi ile bağlantılı bir hesap bulamadık.")
+        home_page.findAndVerify("loginNegativeVerifyMessage_CSS","Bu e‑posta adresi ile bağlantılı bir hesap bulamadık.")
 
 
     def test002(self):
@@ -24,5 +24,5 @@ class negativeLoginTest(WebDriverSetup):
         home_page.findAndClick("acceptButton_CSS")
         home_page.findAndClick("oturumAcBtn_CSS")
         home_page.findAndClick("oturumAcBtn2_CSS")
-        home_page.findAndVerify("loginEmptyVerifyMessage1","Lütfen geçerli bir telefon numarası veya e‑posta adresi girin.")
-        home_page.findAndVerify("loginEmptyVerifyMessage2","Parolanız 4 ila 60 karakter olmalıdır.")
+        home_page.findAndVerify("loginEmptyVerifyMessage1_CSS","Lütfen geçerli bir telefon numarası veya e‑posta adresi girin.")
+        home_page.findAndVerify("loginEmptyVerifyMessage2_CSS","Parolanız 4 ila 60 karakter olmalıdır.")
