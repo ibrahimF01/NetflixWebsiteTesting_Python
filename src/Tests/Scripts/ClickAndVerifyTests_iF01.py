@@ -134,6 +134,12 @@ class clickAndVerifyTests(WebDriverSetup):
         home_page.findAndClick("investorsTitLink6_XPATH")
         home_page.findAndVerify("investorsVerify2J_CSS", "Investor Contacts")
 
-
-
+    def test005(self):
+        driver = self.driver
+        self.driver.get(HomePage.get_base_url())
+        home_page = HomePage(driver)
+        home_page.findAndClick("acceptButton_CSS")
+        home_page.findAndClick("kullanimKosButton_CSS")
+        home_page.findAndVerify("SSSVerify1_CSS", "Netflix Kullanım")
+        home_page.findAndClick("homePageButton_CSS")
 
