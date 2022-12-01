@@ -63,6 +63,25 @@ class HomePage:
         self.faqAnswerVerify5_XPATH = "(//div[starts-with(@class,'faq-answer')]/span)[5]"
         self.faqAnswerVerify6_XPATH = "(//div[starts-with(@class,'faq-answer')]/span)[6]"
 
+        self.SSSButton_XPATH = "//span[starts-with(text(),'SSS')]"
+        self.SSSVerify1_CSS = "h1[class='kb-title']"
+        self.SSSVerify2_XPATH = "//h2[text()='Diziler ve Filmler']"
+        self.SSSVerify3_XPATH = "//h2[text()='Desteklenen Cihazlar']"
+        self.SSSVerify4_XPATH = "//h2[text()='Planlar ve Ücretler']"
+        self.SSSVerify5_XPATH = "//h2[text()='Başlayın']"
+        self.linkButton1_XPATH = "//button[text()='Evet']"
+        self.textAreaInput_CSS = "textarea[class='form-control']"
+        self.sendButton_CSS = "button[class$='btn-primary']"
+        self.phoneContactButton_ID = "phone-contact"
+        self.SSSVerify6_CSS = "div[class$='title-in-app']"
+        self.closeButton1_CSS = "button[class$='popover-close']"
+        self.chatContactButton_ID = "startChatTrigger"
+        self.SSSVerify7_XPATH = "//h1[starts-with(text(),'Sohbete başlamadan')]"
+        self.closeButton2_CSS = "div[class^='chat-avatar']+button[class^='chat-end-button']"
+        self.homePageButton_CSS = "a[title='Netflix']"
+
+
+
         self.oturumAcBtn_CSS = "a[data-uia='header-login-link']"
         self.userLogin_ID = "id_userLoginId"
         self.userPassword_ID = "id_password"
@@ -236,6 +255,38 @@ class HomePage:
         return self.driver.find_element(By.XPATH, self.faqAnswerVerify5_XPATH)
     def get_faqAnswerVerify6_XPATH(self):
         return self.driver.find_element(By.XPATH, self.faqAnswerVerify6_XPATH)
+    def get_SSSButton_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.SSSButton_XPATH)
+    def get_SSSVerify1_CSS(self):
+        return self.driver.find_element(By.CSS_SELECTOR, self.SSSVerify1_CSS)
+    def get_SSSVerify2_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.SSSVerify2_XPATH)
+    def get_SSSVerify3_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.SSSVerify3_XPATH)
+    def get_SSSVerify4_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.SSSVerify4_XPATH)
+    def get_SSSVerify5_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.SSSVerify5_XPATH)
+    def get_linkButton1_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.linkButton1_XPATH)
+    def get_textAreaInput_CSS(self):
+        return self.driver.find_element(By.CSS_SELECTOR, self.textAreaInput_CSS)
+    def get_sendButton_CSS(self):
+        return self.driver.find_element(By.CSS_SELECTOR, self.sendButton_CSS)
+    def get_phoneContactButton_ID(self):
+        return self.driver.find_element(By.ID, self.phoneContactButton_ID)
+    def get_SSSVerify6_CSS(self):
+        return self.driver.find_element(By.CSS_SELECTOR, self.SSSVerify6_CSS)
+    def get_closeButton1_CSS(self):
+        return self.driver.find_element(By.CSS_SELECTOR, self.closeButton1_CSS)
+    def get_chatContactButton_ID(self):
+        return self.driver.find_element(By.ID, self.chatContactButton_ID)
+    def get_SSSVerify7_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.SSSVerify7_XPATH)
+    def get_closeButton2_CSS(self):
+        return self.driver.find_element(By.CSS_SELECTOR, self.closeButton2_CSS)
+    def get_homePageButton_CSS(self):
+        return self.driver.find_element(By.CSS_SELECTOR, self.homePageButton_CSS)
 
 
 
@@ -346,6 +397,14 @@ class HomePage:
             case "faqQuestionButton4_XPATH": self.myElement = self.get_faqQuestionButton4_XPATH()
             case "faqQuestionButton5_XPATH": self.myElement = self.get_faqQuestionButton5_XPATH()
             case "faqQuestionButton6_XPATH": self.myElement = self.get_faqQuestionButton6_XPATH()
+            case "SSSButton_XPATH": self.myElement = self.get_SSSButton_XPATH()
+            case "linkButton1_XPATH": self.myElement = self.get_linkButton1_XPATH()
+            case "sendButton_CSS": self.myElement = self.get_sendButton_CSS()
+            case "phoneContactButton_ID": self.myElement = self.get_phoneContactButton_ID()
+            case "closeButton1_CSS": self.myElement = self.get_closeButton1_CSS()
+            case "chatContactButton_ID": self.myElement = self.get_chatContactButton_ID()
+            case "closeButton2_CSS": self.myElement = self.get_closeButton2_CSS()
+            case "homePageButton_CSS": self.myElement = self.get_homePageButton_CSS()
 
             case "oturumAcBtn_CSS": self.myElement = self.get_oturumAcBtn_CSS()
             case "oturumAcBtn2_CSS": self.myElement = self.get_oturumAcBtn2_CSS()
@@ -370,6 +429,7 @@ class HomePage:
             case "creditCardNumberInput_ID": self.myElement = self.get_creditCardNumberInput_ID()
             case "creditExpirationMonthInput_ID": self.myElement = self.get_creditExpirationMonthInput_ID()
             case "creditCardSecurityCodeInput_ID": self.myElement = self.get_creditCardSecurityCodeInput_ID()
+            case "textAreaInput_CSS": self.myElement = self.get_textAreaInput_CSS()
 
             case "userLogin_ID": self.myElement = self.get_userLogin_ID()
             case "userPassword_ID": self.myElement = self.get_userPassword_ID()
@@ -409,6 +469,13 @@ class HomePage:
             case "faqAnswerVerify4_XPATH": self.myElement = self.get_faqAnswerVerify4_XPATH()
             case "faqAnswerVerify5_XPATH": self.myElement = self.get_faqAnswerVerify5_XPATH()
             case "faqAnswerVerify6_XPATH": self.myElement = self.get_faqAnswerVerify6_XPATH()
+            case "SSSVerify1_CSS": self.myElement = self.get_SSSVerify1_CSS()
+            case "SSSVerify2_XPATH": self.myElement = self.get_SSSVerify2_XPATH()
+            case "SSSVerify3_XPATH": self.myElement = self.get_SSSVerify3_XPATH()
+            case "SSSVerify4_XPATH": self.myElement = self.get_SSSVerify4_XPATH()
+            case "SSSVerify5_XPATH": self.myElement = self.get_SSSVerify5_XPATH()
+            case "SSSVerify6_CSS": self.myElement = self.get_SSSVerify6_CSS()
+            case "SSSVerify7_XPATH": self.myElement = self.get_SSSVerify7_XPATH()
 
             case "loginNegativeVerifyMessage_CSS": self.myElement = self.get_loginNegativeVerifyMessage_CSS()
             case "loginEmptyVerifyMessage1_CSS": self.myElement = self.get_loginEmptyVerifyMessage1_CSS()
