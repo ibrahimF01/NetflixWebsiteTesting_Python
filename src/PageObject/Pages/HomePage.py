@@ -15,6 +15,36 @@ class HomePage:
         self.accountVerify1_CSS = "h1[data-uia='stepTitle']"
         self.continueButton_CSS = "button[data-uia='cta-continue-registration']"
         self.accountVerify2_CSS = "h1[data-uia='stepTitle']"
+        self.accountVerify3_CSS = "div[data-uia='contextRowDone']"
+        self.accountVerify4_CSS = "div[data-uia='contextRowPaperWork']"
+        self.passwordInput_ID = "id_password"
+        self.accountVerify5_CSS = "label[for='cb_emailPreference']"
+        self.binaryInput_CSS = "div[class='ui-binary-input']"
+        self.continueButton2_CSS = "button[data-uia='cta-registration']"
+        self.accountVerify6_XPATH = "//h1[text()='Planınızı seçin.']"
+        self.accountVerify7_XPATH = "//span[starts-with(text(),'Taahhüt yok')]"
+        self.accountVerify8_XPATH = "//span[starts-with(text(),'Tek ve düşük bir ücretle')]"
+        self.accountVerify9_XPATH = "//span[starts-with(text(),'Tüm cihazlarınızda')]"
+        self.continueButton3_CSS = "button[data-uia='continue-button']"
+        self.accountVerify10_XPATH = "//h1[starts-with(text(),'Kendinize uygun')]"
+        self.accountVerify11_XPATH = "//span[starts-with(text(),'Canınız neyi isterse')]"
+        self.accountVerify12_XPATH = "//span[starts-with(text(),'Sadece sizin için')]"
+        self.accountVerify13_XPATH = "//span[starts-with(text(),'Planınızı istediğiniz zaman')]"
+        self.continueButton4_CSS = "button[data-uia='cta-plan-selection']"
+        self.accountVerify14_XPATH = "//h1[starts-with(text(),'Tercih ettiğiniz ödeme')]"
+        self.accountVerify15_XPATH = "//div[starts-with(text(),'Ödeme yönteminiz')]"
+        self.accountVerify16_XPATH = "//div[starts-with(text(),'Endişelenmeyin')]"
+        self.accountVerify17_XPATH = "//div[starts-with(text(),'İstediğiniz zaman')]"
+        self.creditCardButton_ID = "creditOrDebitCardDisplayStringId"
+        self.accountVerify18_XPATH = "//h1[starts-with(text(),'Ödemenizi ayarlayın')]"
+        self.firstNameInput_ID = "id_firstName"
+        self.lastNameInput_ID = "id_lastName"
+        self.creditCardNumberInput_ID = "id_creditCardNumber"
+        self.creditExpirationMonthInput_ID = "id_creditExpirationMonth"
+        self.creditCardSecurityCodeInput_ID = "id_creditCardSecurityCode"
+        self.hasAcceptedInput_XPATH = "//span[text()='Kabul ediyorum.']"
+        self.continueButton5_CSS = "button[data-uia='action-submit-payment']"
+
         self.oturumAcBtn_CSS = "a[data-uia='header-login-link']"
         self.userLogin_ID = "id_userLoginId"
         self.userPassword_ID = "id_password"
@@ -64,6 +94,98 @@ class HomePage:
         return self.driver.find_element(By.CSS_SELECTOR, self.accountVerify1_CSS)
     def get_continueButton_CSS(self):
         return self.driver.find_element(By.CSS_SELECTOR, self.continueButton_CSS)
+
+    def get_accountVerify2_CSS(self):
+        return self.driver.find_element(By.CSS_SELECTOR, self.accountVerify2_CSS)
+
+    def get_accountVerify3_CSS(self):
+        return self.driver.find_element(By.CSS_SELECTOR, self.accountVerify3_CSS)
+
+    def get_accountVerify4_CSS(self):
+        return self.driver.find_element(By.CSS_SELECTOR, self.accountVerify4_CSS)
+
+    def get_passwordInput_ID(self):
+        return self.driver.find_element(By.ID, self.passwordInput_ID)
+
+    def get_accountVerify5_CSS(self):
+        return self.driver.find_element(By.CSS_SELECTOR, self.accountVerify5_CSS)
+
+    def get_binaryInput_CSS(self):
+        return self.driver.find_element(By.CSS_SELECTOR, self.binaryInput_CSS)
+
+    def get_continueButton2_CSS(self):
+        return self.driver.find_element(By.CSS_SELECTOR, self.continueButton2_CSS)
+
+    def get_accountVerify6_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.accountVerify6_XPATH)
+
+    def get_accountVerify7_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.accountVerify7_XPATH)
+
+    def get_accountVerify8_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.accountVerify8_XPATH)
+
+    def get_accountVerify9_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.accountVerify9_XPATH)
+
+    def get_continueButton3_CSS(self):
+        return self.driver.find_element(By.CSS_SELECTOR, self.continueButton3_CSS)
+
+    def get_accountVerify10_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.accountVerify10_XPATH)
+
+    def get_accountVerify11_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.accountVerify11_XPATH)
+
+    def get_accountVerify12_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.accountVerify12_XPATH)
+
+    def get_accountVerify13_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.accountVerify13_XPATH)
+
+    def get_continueButton4_CSS(self):
+        return self.driver.find_element(By.CSS_SELECTOR, self.continueButton4_CSS)
+
+    def get_accountVerify14_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.accountVerify14_XPATH)
+
+    def get_accountVerify15_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.accountVerify15_XPATH)
+
+    def get_accountVerify16_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.accountVerify16_XPATH)
+
+    def get_accountVerify17_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.accountVerify17_XPATH)
+
+    def get_creditCardButton_ID(self):
+        return self.driver.find_element(By.ID, self.creditCardButton_ID)
+
+    def get_accountVerify18_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.accountVerify18_XPATH)
+
+    def get_firstNameInput_ID(self):
+        return self.driver.find_element(By.ID, self.firstNameInput_ID)
+
+    def get_lastNameInput_ID(self):
+        return self.driver.find_element(By.ID, self.lastNameInput_ID)
+
+    def get_creditCardNumberInput_ID(self):
+        return self.driver.find_element(By.ID, self.creditCardNumberInput_ID)
+
+    def get_creditExpirationMonthInput_ID(self):
+        return self.driver.find_element(By.ID, self.creditExpirationMonthInput_ID)
+
+    def get_creditCardSecurityCodeInput_ID(self):
+        return self.driver.find_element(By.ID, self.creditCardSecurityCodeInput_ID)
+
+    def get_hasAcceptedInput_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.hasAcceptedInput_XPATH)
+
+    def get_continueButton5_CSS(self):
+        return self.driver.find_element(By.CSS_SELECTOR, self.continueButton5_CSS)
+
+
     def get_oturumAcBtn_CSS(self):
         return self.driver.find_element(By.CSS_SELECTOR, self.oturumAcBtn_CSS)
     def get_userLogin_ID(self):
@@ -156,6 +278,16 @@ class HomePage:
             case "acceptButton_CSS": self.myElement = self.get_acceptButton_CSS()
             case "startButton_CSS": self.myElement = self.get_startButton_CSS()
             case "continueButton_CSS": self.myElement = self.get_continueButton_CSS()
+            case "binaryInput_CSS": self.myElement = self.get_binaryInput_CSS()
+            case "continueButton2_CSS": self.myElement = self.get_continueButton2_CSS()
+            case "continueButton3_CSS": self.myElement = self.get_continueButton3_CSS()
+            case "continueButton4_CSS": self.myElement = self.get_continueButton4_CSS()
+            case "creditCardButton_ID": self.myElement = self.get_creditCardButton_ID()
+            case "hasAcceptedInput_XPATH": self.myElement = self.get_hasAcceptedInput_XPATH()
+            case "continueButton5_CSS": self.myElement = self.get_continueButton5_CSS()
+            case "continueButton5_CSS": self.myElement = self.get_continueButton5_CSS()
+            case "passwordInput_ID": self.myElement = self.get_passwordInput_ID()
+
             case "oturumAcBtn_CSS": self.myElement = self.get_oturumAcBtn_CSS()
             case "oturumAcBtn2_CSS": self.myElement = self.get_oturumAcBtn2_CSS()
             case "yardimMerkeziBtn_XPATH": self.myElement = self.get_yardimMerkeziBtn_XPATH()
@@ -173,6 +305,13 @@ class HomePage:
     def findAndSend(self, strElement, strText):
         match strElement:
             case "emailInput_ID": self.myElement = self.get_emailInput_ID()
+            case "passwordInput_ID": self.myElement = self.get_passwordInput_ID()
+            case "firstNameInput_ID": self.myElement = self.get_firstNameInput_ID()
+            case "lastNameInput_ID": self.myElement = self.get_lastNameInput_ID()
+            case "creditCardNumberInput_ID": self.myElement = self.get_creditCardNumberInput_ID()
+            case "creditExpirationMonthInput_ID": self.myElement = self.get_creditExpirationMonthInput_ID()
+            case "creditCardSecurityCodeInput_ID": self.myElement = self.get_creditCardSecurityCodeInput_ID()
+
             case "userLogin_ID": self.myElement = self.get_userLogin_ID()
             case "userPassword_ID": self.myElement = self.get_userPassword_ID()
         self.scrollToElementMid(self.myElement)
@@ -183,6 +322,24 @@ class HomePage:
         match strElement:
             case "heroTitle_CSS": self.myElement = self.get_heroTitle_CSS()
             case "accountVerify1_CSS": self.myElement = self.get_accountVerify1_CSS()
+            case "accountVerify2_CSS": self.myElement = self.get_accountVerify2_CSS()
+            case "accountVerify3_CSS": self.myElement = self.get_accountVerify3_CSS()
+            case "accountVerify4_CSS": self.myElement = self.get_accountVerify4_CSS()
+            case "accountVerify5_CSS": self.myElement = self.get_accountVerify5_CSS()
+            case "accountVerify6_XPATH": self.myElement = self.get_accountVerify6_XPATH()
+            case "accountVerify7_XPATH": self.myElement = self.get_accountVerify7_XPATH()
+            case "accountVerify8_XPATH": self.myElement = self.get_accountVerify8_XPATH()
+            case "accountVerify9_XPATH": self.myElement = self.get_accountVerify9_XPATH()
+            case "accountVerify10_XPATH": self.myElement = self.get_accountVerify10_XPATH()
+            case "accountVerify11_XPATH": self.myElement = self.get_accountVerify11_XPATH()
+            case "accountVerify12_XPATH": self.myElement = self.get_accountVerify12_XPATH()
+            case "accountVerify13_XPATH": self.myElement = self.get_accountVerify13_XPATH()
+            case "accountVerify14_XPATH": self.myElement = self.get_accountVerify14_XPATH()
+            case "accountVerify15_XPATH": self.myElement = self.get_accountVerify15_XPATH()
+            case "accountVerify16_XPATH": self.myElement = self.get_accountVerify16_XPATH()
+            case "accountVerify17_XPATH": self.myElement = self.get_accountVerify17_XPATH()
+            case "accountVerify18_XPATH": self.myElement = self.get_accountVerify18_XPATH()
+
             case "loginNegativeVerifyMessage_CSS": self.myElement = self.get_loginNegativeVerifyMessage_CSS()
             case "loginEmptyVerifyMessage1_CSS": self.myElement = self.get_loginEmptyVerifyMessage1_CSS()
             case "loginEmptyVerifyMessage2_CSS": self.myElement = self.get_loginEmptyVerifyMessage2_CSS()
@@ -208,6 +365,7 @@ class HomePage:
         self.scrollToElementMid(self.myElement)
         EC.visibility_of(self.myElement)
         assert textElement in self.myElement.text
+        print("Verified text: "+self.myElement.text)
 
     @staticmethod
     def get_base_url():
