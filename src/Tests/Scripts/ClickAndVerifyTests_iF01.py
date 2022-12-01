@@ -115,6 +115,24 @@ class clickAndVerifyTests(WebDriverSetup):
         driver.switch_to.default_content()
         home_page.findAndClick("homePageButton_CSS")
 
+    def test004(self):
+        driver = self.driver
+        self.driver.get(HomePage.get_base_url())
+        home_page = HomePage(driver)
+        home_page.findAndClick("acceptButton_CSS")
+        home_page.findAndClick("investorsButton_CSS")
+        home_page.findAndClick("investorsTitLink1_XPATH")
+        home_page.findAndVerify("investorsVerify1_CSS", "Company Profile")
+        home_page.findAndClick("investorsTitLink2_XPATH")
+        home_page.findAndVerify("investorsVerify2J_CSS", "Quarterly Earnings")
+        home_page.findAndClick("investorsTitLink3_XPATH")
+        home_page.findAndVerify("investorsVerify2J_CSS", "Financial Releases")
+        home_page.findAndClick("investorsTitLink4_XPATH")
+        home_page.findAndVerify("investorsVerify2J_CSS", "Stock Quote")
+        home_page.findAndClick("investorsTitLink5_XPATH")
+        home_page.findAndVerify("investorsVerify2J_CSS", "Leadership & Directors")
+        home_page.findAndClick("investorsTitLink6_XPATH")
+        home_page.findAndVerify("investorsVerify2J_CSS", "Investor Contacts")
 
 
 
