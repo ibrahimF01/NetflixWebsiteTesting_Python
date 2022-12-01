@@ -11,8 +11,8 @@ class negativeLoginTest(WebDriverSetup):
         home_page = HomePage(driver)
         home_page.findAndClick("acceptButton_CSS")
         home_page.findAndClick("oturumAcBtn_CSS")
-        home_page.findAndSend("userLogin_ID","testMail@hotmail.com")
-        home_page.findAndSend("userPassword_ID","1234567890")
+        home_page.findAndSend("userLogin_ID", "testMail@hotmail.com")
+        home_page.findAndSend("userPassword_ID", "1234567890")
         home_page.findAndClick("oturumAcBtn2_CSS")
         home_page.findAndVerify("loginNegativeVerifyMessage_CSS","Bu e‑posta adresi ile bağlantılı bir hesap bulamadık.")
 
