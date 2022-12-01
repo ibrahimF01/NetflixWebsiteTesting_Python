@@ -80,6 +80,17 @@ class HomePage:
         self.closeButton2_CSS = "div[class^='chat-avatar']+button[class^='chat-end-button']"
         self.homePageButton_CSS = "a[title='Netflix']"
 
+        self.investorsButton_CSS = "a[placeholder='footer_responsive_link_relations']"
+        self.investorsTitLink1_XPATH = "(//a[@class='sf-with-ul'])[1]"
+        self.investorsTitLink2_XPATH = "(//a[@class='sf-with-ul'])[2]"
+        self.investorsTitLink3_XPATH = "(//a[@class='sf-with-ul'])[3]"
+        self.investorsTitLink4_XPATH = "(//a[@class='sf-with-ul'])[4]"
+        self.investorsTitLink5_XPATH = "(//a[@class='sf-with-ul'])[5]"
+        self.investorsTitLink6_XPATH = "(//a[@class='sf-with-ul'])[6]"
+        self.investorsVerify1_CSS = "div[class='module-slider_title']>h1"
+        self.investorsVerify2J_CSS = "h1[class='module_title']"
+
+
 
 
         self.oturumAcBtn_CSS = "a[data-uia='header-login-link']"
@@ -117,6 +128,7 @@ class HomePage:
         self.hizTestiSpeedValue_ID = "speed-value"
         self.orta3Element = "div[data-uia-nmhp='watchOnDevice']"
         self.orta1Element_CSS = "div[data-uia-nmhp='watchOnTv']"
+
 
 
     def get_acceptButton_CSS(self):
@@ -287,6 +299,24 @@ class HomePage:
         return self.driver.find_element(By.CSS_SELECTOR, self.closeButton2_CSS)
     def get_homePageButton_CSS(self):
         return self.driver.find_element(By.CSS_SELECTOR, self.homePageButton_CSS)
+    def get_investorsButton_CSS(self):
+        return self.driver.find_element(By.CSS_SELECTOR, self.investorsButton_CSS)
+    def get_investorsVerify1_CSS(self):
+        return self.driver.find_element(By.CSS_SELECTOR, self.investorsVerify1_CSS)
+    def get_investorsTitLink1_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.investorsTitLink1_XPATH)
+    def get_investorsTitLink2_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.investorsTitLink2_XPATH)
+    def get_investorsTitLink3_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.investorsTitLink3_XPATH)
+    def get_investorsTitLink4_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.investorsTitLink4_XPATH)
+    def get_investorsTitLink5_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.investorsTitLink5_XPATH)
+    def get_investorsTitLink6_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.investorsTitLink6_XPATH)
+    def get_investorsVerify2J_CSS(self):
+        return self.driver.find_element(By.CSS_SELECTOR, self.investorsVerify2J_CSS)
 
 
 
@@ -405,6 +435,13 @@ class HomePage:
             case "chatContactButton_ID": self.myElement = self.get_chatContactButton_ID()
             case "closeButton2_CSS": self.myElement = self.get_closeButton2_CSS()
             case "homePageButton_CSS": self.myElement = self.get_homePageButton_CSS()
+            case "investorsButton_CSS": self.myElement = self.get_investorsButton_CSS()
+            case "investorsTitLink1_XPATH": self.myElement = self.get_investorsTitLink1_XPATH()
+            case "investorsTitLink2_XPATH": self.myElement = self.get_investorsTitLink2_XPATH()
+            case "investorsTitLink3_XPATH": self.myElement = self.get_investorsTitLink3_XPATH()
+            case "investorsTitLink4_XPATH": self.myElement = self.get_investorsTitLink4_XPATH()
+            case "investorsTitLink5_XPATH": self.myElement = self.get_investorsTitLink5_XPATH()
+            case "investorsTitLink6_XPATH": self.myElement = self.get_investorsTitLink6_XPATH()
 
             case "oturumAcBtn_CSS": self.myElement = self.get_oturumAcBtn_CSS()
             case "oturumAcBtn2_CSS": self.myElement = self.get_oturumAcBtn2_CSS()
@@ -476,6 +513,8 @@ class HomePage:
             case "SSSVerify5_XPATH": self.myElement = self.get_SSSVerify5_XPATH()
             case "SSSVerify6_CSS": self.myElement = self.get_SSSVerify6_CSS()
             case "SSSVerify7_XPATH": self.myElement = self.get_SSSVerify7_XPATH()
+            case "investorsVerify1_CSS": self.myElement = self.get_investorsVerify1_CSS()
+            case "investorsVerify2J_CSS": self.myElement = self.get_investorsVerify2J_CSS()
 
             case "loginNegativeVerifyMessage_CSS": self.myElement = self.get_loginNegativeVerifyMessage_CSS()
             case "loginEmptyVerifyMessage1_CSS": self.myElement = self.get_loginEmptyVerifyMessage1_CSS()
