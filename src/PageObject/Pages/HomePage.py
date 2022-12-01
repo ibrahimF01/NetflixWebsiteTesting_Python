@@ -90,6 +90,8 @@ class HomePage:
         self.investorsVerify1_CSS = "div[class='module-slider_title']>h1"
         self.investorsVerify2J_CSS = "h1[class='module_title']"
         self.kullanimKosButton_CSS = "a[placeholder='footer_responsive_link_terms']"
+        self.contactUsButton_CSS = "a[placeholder='footer_responsive_link_contact_us']"
+        self.contactUsVerify_XPATH = "//h1[starts-with(text(),'Müşteri Hizmetleri')]"
 
 
 
@@ -320,6 +322,10 @@ class HomePage:
         return self.driver.find_element(By.CSS_SELECTOR, self.investorsVerify2J_CSS)
     def get_kullanimKosButton_CSS(self):
         return self.driver.find_element(By.CSS_SELECTOR, self.kullanimKosButton_CSS)
+    def get_contactUsButton_CSS(self):
+        return self.driver.find_element(By.CSS_SELECTOR, self.contactUsButton_CSS)
+    def get_contactUsVerify_XPATH(self):
+        return self.driver.find_element(By.XPATH, self.contactUsVerify_XPATH)
 
 
 
@@ -446,6 +452,7 @@ class HomePage:
             case "investorsTitLink5_XPATH": self.myElement = self.get_investorsTitLink5_XPATH()
             case "investorsTitLink6_XPATH": self.myElement = self.get_investorsTitLink6_XPATH()
             case "kullanimKosButton_CSS": self.myElement = self.get_kullanimKosButton_CSS()
+            case "contactUsButton_CSS": self.myElement = self.get_contactUsButton_CSS()
 
             case "oturumAcBtn_CSS": self.myElement = self.get_oturumAcBtn_CSS()
             case "oturumAcBtn2_CSS": self.myElement = self.get_oturumAcBtn2_CSS()
@@ -519,6 +526,7 @@ class HomePage:
             case "SSSVerify7_XPATH": self.myElement = self.get_SSSVerify7_XPATH()
             case "investorsVerify1_CSS": self.myElement = self.get_investorsVerify1_CSS()
             case "investorsVerify2J_CSS": self.myElement = self.get_investorsVerify2J_CSS()
+            case "contactUsVerify_XPATH": self.myElement = self.get_contactUsVerify_XPATH()
 
             case "loginNegativeVerifyMessage_CSS": self.myElement = self.get_loginNegativeVerifyMessage_CSS()
             case "loginEmptyVerifyMessage1_CSS": self.myElement = self.get_loginEmptyVerifyMessage1_CSS()
