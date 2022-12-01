@@ -89,6 +89,31 @@ class clickAndVerifyTests(WebDriverSetup):
         home_page.findAndClick("faqQuestionButton6_XPATH")
         home_page.findAndVerify("faqAnswerVerify6_XPATH", "Üyeliğinize dâhil")
 
+    def test003(self):
+        driver = self.driver
+        self.driver.get(HomePage.get_base_url())
+        home_page = HomePage(driver)
+        wait = WebDriverWait(driver, 30)
+        home_page.findAndClick("acceptButton_CSS")
+        home_page.findAndClick("SSSButton_XPATH")
+        home_page.findAndVerify("SSSVerify1_CSS", "Netflix nedir?")
+        home_page.findAndVerify("SSSVerify2_XPATH", "Diziler ve Filmler")
+        home_page.findAndVerify("SSSVerify3_XPATH", "Desteklenen Cihazlar")
+        home_page.findAndVerify("SSSVerify4_XPATH", "Planlar ve Ücretler")
+        home_page.findAndVerify("SSSVerify5_XPATH", "Başlayın")
+        home_page.findAndClick("linkButton1_XPATH")
+        home_page.findAndSend("textAreaInput_CSS", "Bu bir test")
+        home_page.findAndClick("sendButton_CSS")
+        home_page.findAndClick("phoneContactButton_ID")
+        home_page.findAndVerify("SSSVerify6_CSS", "Uygulama üzerinden")
+        home_page.findAndClick("closeButton1_CSS")
+        home_page.findAndClick("chatContactButton_ID")
+        driver.switch_to.frame(0)
+        wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div[class^='chat-avatar']+button[class^='chat-end-button']")))
+        home_page.findAndVerify("SSSVerify7_XPATH", "Sohbete başlamadan")
+        home_page.findAndClick("closeButton2_CSS")
+        driver.switch_to.default_content()
+        home_page.findAndClick("homePageButton_CSS")
 
 
 
