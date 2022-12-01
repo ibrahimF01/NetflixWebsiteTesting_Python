@@ -89,6 +89,7 @@ class HomePage:
         self.investorsTitLink6_XPATH = "(//a[@class='sf-with-ul'])[6]"
         self.investorsVerify1_CSS = "div[class='module-slider_title']>h1"
         self.investorsVerify2J_CSS = "h1[class='module_title']"
+        self.kullanimKosButton_CSS = "a[placeholder='footer_responsive_link_terms']"
 
 
 
@@ -317,6 +318,8 @@ class HomePage:
         return self.driver.find_element(By.XPATH, self.investorsTitLink6_XPATH)
     def get_investorsVerify2J_CSS(self):
         return self.driver.find_element(By.CSS_SELECTOR, self.investorsVerify2J_CSS)
+    def get_kullanimKosButton_CSS(self):
+        return self.driver.find_element(By.CSS_SELECTOR, self.kullanimKosButton_CSS)
 
 
 
@@ -442,6 +445,7 @@ class HomePage:
             case "investorsTitLink4_XPATH": self.myElement = self.get_investorsTitLink4_XPATH()
             case "investorsTitLink5_XPATH": self.myElement = self.get_investorsTitLink5_XPATH()
             case "investorsTitLink6_XPATH": self.myElement = self.get_investorsTitLink6_XPATH()
+            case "kullanimKosButton_CSS": self.myElement = self.get_kullanimKosButton_CSS()
 
             case "oturumAcBtn_CSS": self.myElement = self.get_oturumAcBtn_CSS()
             case "oturumAcBtn2_CSS": self.myElement = self.get_oturumAcBtn2_CSS()
