@@ -60,7 +60,34 @@ class clickAndVerifyTests(WebDriverSetup):
         home_page.findAndClick("hasAcceptedInput_XPATH")
         # home_page.findAndClick("continueButton5_CSS") #Bu adım gerçek kullanıcı bilgileri girildiğinde aktif edilmelidir.
 
-
+    def test002(self):
+        driver = self.driver
+        self.driver.get(HomePage.get_base_url())
+        home_page = HomePage(driver)
+        wait = WebDriverWait(driver, 30)
+        home_page.findAndClick("acceptButton_CSS")
+        home_page.findAndVerify("homepageVerify1_CSS", "Stranger Things")
+        home_page.findAndVerify("homepageVerify2_CSS", "İndiriliyor")
+        home_page.findAndVerify("homepageVerify3_XPATH", "Çevrimdışı izlemek için")
+        home_page.findAndVerify("homepageVerify4_XPATH", "En sevdiğiniz içerikleri")
+        home_page.findAndVerify("homepageVerify5_XPATH", "Sıkça Sorulan")
+        home_page.findAndClick("faqQuestionButton1_XPATH")
+        home_page.findAndVerify("faqAnswerVerify1_XPATH", "Netflix; internet bağlantılı")
+        wait.until(EC.element_to_be_clickable((By.XPATH, "(//button[@class='faq-question'])[2]")))
+        home_page.findAndClick("faqQuestionButton2_XPATH")
+        home_page.findAndVerify("faqAnswerVerify2_XPATH", "Netflix'i akıllı telefonunuz")
+        wait.until(EC.element_to_be_clickable((By.XPATH, "(//button[@class='faq-question'])[3]")))
+        home_page.findAndClick("faqQuestionButton3_XPATH")
+        home_page.findAndVerify("faqAnswerVerify3_XPATH", "İstediğiniz yerde, istediğiniz zaman")
+        wait.until(EC.element_to_be_clickable((By.XPATH, "(//button[@class='faq-question'])[4]")))
+        home_page.findAndClick("faqQuestionButton4_XPATH")
+        home_page.findAndVerify("faqAnswerVerify4_XPATH", "Netflix esnektir")
+        wait.until(EC.element_to_be_clickable((By.XPATH, "(//button[@class='faq-question'])[5]")))
+        home_page.findAndClick("faqQuestionButton5_XPATH")
+        home_page.findAndVerify("faqAnswerVerify5_XPATH", "Netflix, uzun metrajlı")
+        wait.until(EC.element_to_be_clickable((By.XPATH, "(//button[@class='faq-question'])[6]")))
+        home_page.findAndClick("faqQuestionButton6_XPATH")
+        home_page.findAndVerify("faqAnswerVerify6_XPATH", "Üyeliğinize dâhil")
 
 
 
