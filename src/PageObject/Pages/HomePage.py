@@ -132,6 +132,15 @@ class HomePage:
         self.orta3Element = "div[data-uia-nmhp='watchOnDevice']"
         self.orta1Element_CSS = "div[data-uia-nmhp='watchOnTv']"
 
+        self.SubLink01 = "//span[contains(text(),'Medya Merkezi')]"
+        self.SubLink02 = "//span[contains(text(),'İzleme Yolları')]"
+        self.SubLink03 = "//span[contains(text(),'Kurumsal Bilgiler')]"
+        self.SubLink04 = "//span[contains(text(),'Sadece Netflix')]"
+        self.mediaCenterVerify = "//*[text()='Medya Merkezi']"
+        self.izlemeYollari = "//*[contains(text(),'Favori cihazlarınızla')]"
+        self.KurumsalInfo = "//*[contains(text(),'Netflix Kurumsal Bilgileri')]"
+        self.OnlyNetflix = "(//*[contains(text(),'Yalnızca Netflix')])[3]"
+
 
 
     def get_acceptButton_CSS(self):
@@ -400,6 +409,33 @@ class HomePage:
     def get_orta1Element_CSS(self):
         return self.driver.find_element(By.CSS_SELECTOR, self.orta1Element_CSS)
 
+    def get_SubLink01(self):
+        return self.driver.find_element(By.XPATH, self.SubLink01)
+
+    def get_SubLink02(self):
+        return self.driver.find_element(By.XPATH, self.SubLink02)
+
+    def get_SubLink03(self):
+        return self.driver.find_element(By.XPATH, self.SubLink03)
+
+    def get_SubLink04(self):
+        return self.driver.find_element(By.XPATH, self.SubLink04)
+
+    def get_mediaCenterVerify(self):
+        return self.driver.find_element(By.XPATH, self.mediaCenterVerify)
+
+    def get_izlemeYollari(self):
+        return self.driver.find_element(By.XPATH, self.izlemeYollari)
+
+    def get_KurumsalInfo(self):
+        return self.driver.find_element(By.XPATH, self.KurumsalInfo)
+
+    def get_OnlyNetflix(self):
+        return self.driver.find_element(By.XPATH, self.OnlyNetflix)
+
+
+
+
     def scrollToElementMid(self, element):
         scrollElementIntoMiddle = "var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);"
         "var elementTop = arguments[0].getBoundingClientRect().top;"
@@ -464,6 +500,10 @@ class HomePage:
             case "gizlilikBtn_XPATH": self.myElement = self.get_gizlilikBtn_XPATH()
             case "hizTestiBtn_XPATH": self.myElement = self.get_hizTestiBtn_XPATH()
             case "hizTestiDetails_ID": self.myElement = self.get_hizTestiDetails_ID()
+            case "SubLink01": self.myElement = self.get_SubLink01()
+            case "SubLink02": self.myElement = self.get_SubLink02()
+            case "SubLink03": self.myElement = self.get_SubLink03()
+            case "SubLink04": self.myElement = self.get_SubLink04()
         self.scrollToElementMid(self.myElement)
         EC.element_to_be_clickable(self.myElement)
         self.myElement.click()
@@ -550,6 +590,16 @@ class HomePage:
             case "gizlilikVerify_XPATH": self.myElement = self.get_gizlilikVerify_XPATH()
             case "orta3Element": self.myElement = self.get_orta3()
             case "orta1Element_CSS": self.myElement = self.get_orta1Element_CSS()
+            case "SubLink01": self.myElement = self.get_SubLink01()
+            case "SubLink02": self.myElement = self.get_SubLink02()
+            case "SubLink03": self.myElement = self.get_SubLink03()
+            case "SubLink04": self.myElement = self.get_SubLink04()
+            case "mediaCenterVerify": self.myElement = self.get_mediaCenterVerify()
+            case "izlemeYollari": self.myElement = self.get_izlemeYollari()
+            case "KurumsalInfo": self.myElement = self.get_KurumsalInfo()
+            case "OnlyNetflix": self.myElement = self.get_OnlyNetflix()
+
+
         self.scrollToElementMid(self.myElement)
         EC.visibility_of(self.myElement)
         assert textElement in self.myElement.text
